@@ -1,0 +1,235 @@
+// Reset CSS
+@import url("https://cdn.jsdelivr.net/gh/jgthms/minireset.css@master/minireset.min.css");
+
+a {
+	text-decoration: none;
+}
+
+// Fonts and colors
+@font-face {
+	font-family: "Inter";
+	src: url("../fonts/Inter/static/Inter-Regular.ttf");
+	font-weight: 400;
+}
+
+@font-face {
+	font-family: "Inter";
+	src: url("../fonts/Inter/static/Inter-Bold.ttf");
+	font-weight: 700;
+}
+
+@font-face {
+	font-family: "Lexend Deca";
+	src: url("../fonts/Lexend_Deca/static/LexendDeca-Regular.ttf");
+	font-weight: 400;
+}
+
+$main-background: hsl(233, 47%, 7%);
+$card-background: hsl(244, 38%, 16%);
+$primary: hsl(277, 64%, 61%);
+$paragraph: hsla(0, 0%, 100%, 0.75);
+$white: hsl(0, 0%, 100%);
+$transparent-white: hsla(0, 0%, 100%, 0.6);
+
+.primary-color {
+	color: $primary;
+}
+
+body {
+	background-color: $main-background;
+	font-family: "Inter", Arial, Helvetica, sans-serif;
+	color: $white;
+}
+
+// Break-points
+$max-down: 1121px;
+$max-up: 1122px;
+$middle-down: 1067px;
+$middle-up: 1068px;
+$min-down: 999px;
+$min-up: 1000px;
+$mobile-down: 499px;
+$mobile-up: 500px;
+
+// CSS
+.parent-container {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	display: table;
+}
+
+.child-container {
+	display: table-cell;
+	vertical-align: middle;
+	text-align: center;
+}
+
+.content {
+	display: inline-block;
+	text-align: left;
+}
+
+main {
+	border-radius: 10px;
+	background-color: $card-background;
+	display: grid;
+	max-width: calc(540px * 2);
+	margin: 20px;
+	
+	@media screen and (max-width: $min-down) {
+		display: flex;
+		flex-direction: column-reverse;
+		text-align: center;
+		max-width: 654px;
+	}
+
+	@media screen and (min-width: $min-up) and (max-width: $middle-down) {
+		grid-template-columns: 5fr 3fr;
+		display: grid;
+	}
+
+	@media screen and (min-width: $middle-up) and (max-width: $max-down) {
+		grid-template-columns: 4fr 3fr;
+		display: grid;
+	}
+
+	@media screen and (min-width: $max-up) {
+		grid-template-columns: 1fr 1fr;
+		display: grid;
+	}
+}
+
+.left-side {
+	position: relative;
+
+	@media screen and (max-width: $middle-down) {
+		padding: 25px 25px 0px 25px;
+	}
+
+	@media screen and (min-width: $middle-up) and (max-width: $max-down) {
+		padding: 40px 40px 0px 40px;
+	}
+
+	@media screen and (min-width: $max-up) {
+		padding: 70px 70px 0px 70px;
+	}
+
+	h1 {
+		font-weight: 700;
+		font-size: 36px;
+	}
+
+	p {
+		font-size: 15px;
+		color: $paragraph;
+		line-height: 25px;
+		margin: 20px 40px 0px 0px;
+
+		@media screen and (max-width: $min-down) {
+			margin-bottom: 35px;
+		}
+	}
+}
+
+.stats {
+	@media screen and (max-width: $mobile-down) {
+		display: flex;
+		flex-direction: column;
+	}
+
+	@media screen and (min-width: $mobile-up) and (max-width: $min-down) {
+		display: grid;
+		grid-template-columns: 1fr 1fr 1fr;
+	}	
+
+	@media screen and (min-width: $min-up) {
+		display: grid;
+		position: absolute;
+		grid-template-columns: 1fr 1fr 1fr;
+	}	
+
+	@media screen and (min-width: $min-up) and (max-width: $middle-down) {
+		margin: 80px 0px 25px 0px;
+		bottom: 0px;
+		width: calc(100% - 25px);
+	}
+
+	@media screen and (min-width: $middle-up) and (max-width: $max-down) {
+		margin: 80px 0px 40px 0px;
+		bottom: 0px;
+		width: calc(100% - 40px);
+	}
+
+	@media screen and (min-width: $max-up) {
+		margin: 80px 0px 60px 0px;
+		bottom: 0px;
+		width: calc(100% - 70px);
+	}
+
+	* {
+		display: block;
+
+		@media screen and (max-width: $min-down) {
+			margin-bottom: 15px;
+		}
+	}
+
+	strong {
+		font-weight: 700;
+		font-size: 22px;
+		margin-bottom: 5px;
+	}
+
+	span {
+		font-family: "Lexend Deca", Arial, Helvetica, sans-serif;
+		color: $transparent-white;
+		font-size: 12px;
+		letter-spacing: 1px;
+	}
+}
+
+.right-side {
+	background-color: $primary;
+	position: relative;
+	width: fit-content;
+	height: fit-content;
+	
+	@media screen and (max-width: $min-down) {
+		border-radius: 10px 10px 0px 0px;
+	}
+	
+	@media screen and (min-width: $min-up) {
+		border-radius: 0px 10px 10px 0px;
+	}
+}
+
+@media screen and (min-width: $min-up) {
+	.mobile {
+		visibility: hidden;
+		position: absolute;
+	}
+}
+
+@media screen and (max-width: $min-down) {
+	.desktop {
+		position: absolute;
+		visibility: hidden;
+	}
+}
+
+img {
+	@media screen and (max-width: $min-down) {
+		border-radius: 10px 10px 0px 0px;
+		width: auto;
+	}
+	
+	@media screen and (min-width: $min-up) {
+		border-radius: 0px 10px 10px 0px;
+		width: auto;
+	}
+	
+	display: block;
+	opacity: 0.6;
+	filter: brightness(70%) sepia(20%);
+}

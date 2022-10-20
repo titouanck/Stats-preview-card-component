@@ -1,0 +1,224 @@
+@import url("https://cdn.jsdelivr.net/gh/jgthms/minireset.css@master/minireset.min.css");
+a {
+  text-decoration: none;
+}
+
+@font-face {
+  font-family: "Inter";
+  src: url("../fonts/Inter/static/Inter-Regular.ttf");
+  font-weight: 400;
+}
+@font-face {
+  font-family: "Inter";
+  src: url("../fonts/Inter/static/Inter-Bold.ttf");
+  font-weight: 700;
+}
+@font-face {
+  font-family: "Lexend Deca";
+  src: url("../fonts/Lexend_Deca/static/LexendDeca-Regular.ttf");
+  font-weight: 400;
+}
+.primary-color {
+  color: hsl(277deg, 64%, 61%);
+}
+
+body {
+  background-color: hsl(233deg, 47%, 7%);
+  font-family: "Inter", Arial, Helvetica, sans-serif;
+  color: hsl(0deg, 0%, 100%);
+}
+
+.parent-container {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  display: table;
+}
+
+.child-container {
+  display: table-cell;
+  vertical-align: middle;
+  text-align: center;
+}
+
+.content {
+  display: inline-block;
+  text-align: left;
+}
+
+main {
+  border-radius: 10px;
+  background-color: hsl(244deg, 38%, 16%);
+  display: grid;
+  max-width: 1080px;
+  margin: 20px;
+}
+@media screen and (max-width: 999px) {
+  main {
+    display: flex;
+    flex-direction: column-reverse;
+    text-align: center;
+    max-width: 654px;
+  }
+}
+@media screen and (min-width: 1000px) and (max-width: 1067px) {
+  main {
+    grid-template-columns: 5fr 3fr;
+    display: grid;
+  }
+}
+@media screen and (min-width: 1068px) and (max-width: 1121px) {
+  main {
+    grid-template-columns: 4fr 3fr;
+    display: grid;
+  }
+}
+@media screen and (min-width: 1122px) {
+  main {
+    grid-template-columns: 1fr 1fr;
+    display: grid;
+  }
+}
+
+.left-side {
+  position: relative;
+}
+@media screen and (max-width: 1067px) {
+  .left-side {
+    padding: 25px 25px 0px 25px;
+  }
+}
+@media screen and (min-width: 1068px) and (max-width: 1121px) {
+  .left-side {
+    padding: 40px 40px 0px 40px;
+  }
+}
+@media screen and (min-width: 1122px) {
+  .left-side {
+    padding: 70px 70px 0px 70px;
+  }
+}
+.left-side h1 {
+  font-weight: 700;
+  font-size: 36px;
+}
+.left-side p {
+  font-size: 15px;
+  color: hsla(0deg, 0%, 100%, 0.75);
+  line-height: 25px;
+  margin: 20px 40px 0px 0px;
+}
+@media screen and (max-width: 999px) {
+  .left-side p {
+    margin-bottom: 35px;
+  }
+}
+
+@media screen and (max-width: 499px) {
+  .stats {
+    display: flex;
+    flex-direction: column;
+  }
+}
+@media screen and (min-width: 500px) and (max-width: 999px) {
+  .stats {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+@media screen and (min-width: 1000px) {
+  .stats {
+    display: grid;
+    position: absolute;
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+@media screen and (min-width: 1000px) and (max-width: 1067px) {
+  .stats {
+    margin: 80px 0px 25px 0px;
+    bottom: 0px;
+    width: calc(100% - 25px);
+  }
+}
+@media screen and (min-width: 1068px) and (max-width: 1121px) {
+  .stats {
+    margin: 80px 0px 40px 0px;
+    bottom: 0px;
+    width: calc(100% - 40px);
+  }
+}
+@media screen and (min-width: 1122px) {
+  .stats {
+    margin: 80px 0px 60px 0px;
+    bottom: 0px;
+    width: calc(100% - 70px);
+  }
+}
+.stats * {
+  display: block;
+}
+@media screen and (max-width: 999px) {
+  .stats * {
+    margin-bottom: 15px;
+  }
+}
+.stats strong {
+  font-weight: 700;
+  font-size: 22px;
+  margin-bottom: 5px;
+}
+.stats span {
+  font-family: "Lexend Deca", Arial, Helvetica, sans-serif;
+  color: hsla(0deg, 0%, 100%, 0.6);
+  font-size: 12px;
+  letter-spacing: 1px;
+}
+
+.right-side {
+  background-color: hsl(277deg, 64%, 61%);
+  position: relative;
+  width: fit-content;
+  height: fit-content;
+}
+@media screen and (max-width: 999px) {
+  .right-side {
+    border-radius: 10px 10px 0px 0px;
+  }
+}
+@media screen and (min-width: 1000px) {
+  .right-side {
+    border-radius: 0px 10px 10px 0px;
+  }
+}
+
+@media screen and (min-width: 1000px) {
+  .mobile {
+    visibility: hidden;
+    position: absolute;
+  }
+}
+@media screen and (max-width: 999px) {
+  .desktop {
+    position: absolute;
+    visibility: hidden;
+  }
+}
+img {
+  display: block;
+  opacity: 0.6;
+  filter: brightness(70%) sepia(20%);
+}
+@media screen and (max-width: 999px) {
+  img {
+    border-radius: 10px 10px 0px 0px;
+    width: auto;
+  }
+}
+@media screen and (min-width: 1000px) {
+  img {
+    border-radius: 0px 10px 10px 0px;
+    width: auto;
+  }
+}
+
+/*# sourceMappingURL=styles.css.map */
