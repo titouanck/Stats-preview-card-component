@@ -63,6 +63,7 @@ $mobile-up: 500px;
 	display: table-cell;
 	vertical-align: middle;
 	text-align: center;
+	overflow: hidden;
 }
 
 .content {
@@ -72,10 +73,10 @@ $mobile-up: 500px;
 
 main {
 	border-radius: 10px;
+	margin: 20px;
 	background-color: $card-background;
 	display: grid;
 	max-width: calc(540px * 2);
-	margin: 20px;
 	
 	@media screen and (max-width: $min-down) {
 		display: flex;
@@ -192,8 +193,6 @@ main {
 .right-side {
 	background-color: $primary;
 	position: relative;
-	width: fit-content;
-	height: fit-content;
 	
 	@media screen and (max-width: $min-down) {
 		border-radius: 10px 10px 0px 0px;
@@ -221,15 +220,14 @@ main {
 img {
 	@media screen and (max-width: $min-down) {
 		border-radius: 10px 10px 0px 0px;
-		width: auto;
 	}
 	
 	@media screen and (min-width: $min-up) {
 		border-radius: 0px 10px 10px 0px;
-		width: auto;
 	}
 	
-	display: block;
+	display:block;
+	margin-bottom: 0px;
 	opacity: 0.6;
 	filter: brightness(70%) sepia(20%);
 }

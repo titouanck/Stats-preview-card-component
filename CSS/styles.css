@@ -39,6 +39,7 @@ body {
   display: table-cell;
   vertical-align: middle;
   text-align: center;
+  overflow: hidden;
 }
 
 .content {
@@ -48,10 +49,10 @@ body {
 
 main {
   border-radius: 10px;
+  margin: 20px;
   background-color: hsl(244deg, 38%, 16%);
   display: grid;
   max-width: 1080px;
-  margin: 20px;
 }
 @media screen and (max-width: 999px) {
   main {
@@ -177,8 +178,6 @@ main {
 .right-side {
   background-color: hsl(277deg, 64%, 61%);
   position: relative;
-  width: fit-content;
-  height: fit-content;
 }
 @media screen and (max-width: 999px) {
   .right-side {
@@ -205,19 +204,18 @@ main {
 }
 img {
   display: block;
+  margin-bottom: 0px;
   opacity: 0.6;
   filter: brightness(70%) sepia(20%);
 }
 @media screen and (max-width: 999px) {
   img {
     border-radius: 10px 10px 0px 0px;
-    width: auto;
   }
 }
 @media screen and (min-width: 1000px) {
   img {
     border-radius: 0px 10px 10px 0px;
-    width: auto;
   }
 }
 
